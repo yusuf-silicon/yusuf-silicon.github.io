@@ -788,6 +788,34 @@
     }
 ],
 
+"hobbies": [
+    {
+        "type": "3D Models",
+        "description": "Creating and designing three-dimensional models using Blender for visualization, prototyping, and artistic expression.",
+        "Gallery": [
+        {   
+          "image": "../images/hobbies/3d_models/elk.png",
+          "description": "A 3D mesh wireframe model of a deer skull and antlers designed in Blender, showcasing clean edge-flow topology, precise organic sculpting, and a glowing holographic material shader."
+        },
+        {
+          "image": "../images/hobbies/3d_models/bowling_ally.png", 
+          "description": "A 3D render of a bowling strike simulation designed in Blender, showcasing dynamic physics animation, complex object scattering, and stylized geometric pattern textures."
+        },
+        {
+          "image": "../images/hobbies/3d_models/bunny_eye.png", 
+          "description": "A 3D close-up render of an organic eye structure designed in Blender, showcasing complex particle hair systems for eyelashes, macro texturing, and realistic glossy material reflections."
+        }
+        ]
+    },
+    {
+        "type": "2D Arts",
+        "description": "Creating and designing two-dimensional artwork using various media and techniques.",
+        "Gallery": [
+
+        ]
+    }
+],
+
 "contact": {
     "google_scholar": "https://scholar.google.com/citations?user=EJitK1IAAAAJ&hl=en",
 

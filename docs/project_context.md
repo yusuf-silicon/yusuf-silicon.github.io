@@ -16,6 +16,17 @@ The website should continue evolving through:
 * PhD
 * Industry Experience
 
+To Design 8 pages in total:
+
+1. Home
+2. Research
+3. Publications
+4. Academics
+5. Experience
+6. Projects
+7. Hobbies
+8. Contacts
+
 without requiring redesign.
 
 ---
@@ -63,13 +74,14 @@ data/profile_data/profile.json
 
 The profile json controls:
 
-* projects
-* publications
 * research
+* publications
 * education
 * experience
 * achievements
 * certifications
+* projects
+* Hobby
 * contact information
 
 Components should consume data from profile.json rather than hardcoded values.

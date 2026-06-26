@@ -54,6 +54,8 @@ without approval.
 
    * 3 files unless explicitly approved.
 
+8. Optimize for Tokens savings rather than heavy research approach since we have a limited amount of tokens. Avoid unncessary tokens expense.
+
 ---
 
 ## Responsive Rules
@@ -89,6 +91,10 @@ without approval.
 4. Exact color definitions will be provided later.
 
 5. Fonts, spacing and design tokens must remain globally consistent.
+
+6. Extract the same Theme styles, fonts, colours, background and everything else and make those the standards.
+
+7. Thr Grid background on the home page is the main background, this is what should be set up for all the pages
 
 ---
 
