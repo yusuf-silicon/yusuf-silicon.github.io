@@ -1,0 +1,296 @@
+/* ==========================================================================
+   BASE STYLES — Yusuf Silicon Portfolio
+   Reset, typography, grid backgrounds, utility classes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Reset & Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-body-md);
+  line-height: var(--leading-body-md);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-container);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   2. Material Symbols Configuration
+   -------------------------------------------------------------------------- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   3. Typography Utility Classes
+   -------------------------------------------------------------------------- */
+
+/* Headlines */
+.font-headline-xl {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-xl);
+  font-weight: var(--weight-headline-xl);
+  line-height: var(--leading-headline-xl);
+  letter-spacing: var(--tracking-headline-xl);
+}
+
+.font-headline-lg {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-lg);
+  font-weight: var(--weight-headline-lg);
+  line-height: var(--leading-headline-lg);
+  letter-spacing: var(--tracking-headline-lg);
+}
+
+.font-headline-md {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-headline-md);
+  line-height: var(--leading-headline-md);
+  letter-spacing: var(--tracking-headline-md);
+}
+
+/* Body */
+.font-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-body-lg);
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+}
+
+.font-body-md {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-body-md);
+  line-height: var(--leading-body-md);
+  letter-spacing: var(--tracking-body-md);
+}
+
+.font-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-body-sm);
+  line-height: var(--leading-body-sm);
+  letter-spacing: var(--tracking-body-sm);
+}
+
+/* Mono Labels & Data */
+.font-label-caps {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-caps);
+  font-weight: var(--weight-label-caps);
+  line-height: var(--leading-label-caps);
+  letter-spacing: var(--tracking-label-caps);
+  text-transform: uppercase;
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-data);
+  font-weight: var(--weight-mono-data);
+  line-height: var(--leading-mono-data);
+  letter-spacing: var(--tracking-mono-data);
+}
+
+/* --------------------------------------------------------------------------
+   4. Grid Background Patterns
+   -------------------------------------------------------------------------- */
+
+/* Blueprint grid lines (40x40px) — used on Home page */
+.blueprint-grid-lines {
+  background-image:
+    linear-gradient(to right, #e5eeff 1px, transparent 1px),
+    linear-gradient(to bottom, #e5eeff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .blueprint-grid-lines {
+  background-image:
+    linear-gradient(to right, #1e2d42 1px, transparent 1px),
+    linear-gradient(to bottom, #1e2d42 1px, transparent 1px);
+}
+
+/* Blueprint dot grid (32x32px) — used on Research, Academics, etc. */
+.blueprint-grid-dots {
+  background-image: radial-gradient(circle, #c4c5d7 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.dark .blueprint-grid-dots {
+  background-image: radial-gradient(circle, #3a3d4e 1px, transparent 1px);
+}
+
+/* Blueprint dot grid (40x40px) — used on Projects, Contact */
+.blueprint-grid-dots-lg {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .blueprint-grid-dots-lg {
+  background-image: radial-gradient(circle, #3a3d4e 1px, transparent 1px);
+}
+
+/* Blueprint dot grid (24x24px) — used on Hobbies */
+.blueprint-grid-dots-sm {
+  background-image: radial-gradient(circle, #c4c5d7 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .blueprint-grid-dots-sm {
+  background-image: radial-gradient(circle, #3a3d4e 1px, transparent 1px);
+}
+
+/* Blueprint low-opacity dot grid — used on Experience */
+.blueprint-grid-dots-faint {
+  background-image: radial-gradient(circle, #747686 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.05;
+}
+
+/* --------------------------------------------------------------------------
+   5. Shadow Utilities
+   -------------------------------------------------------------------------- */
+.hard-shadow {
+  box-shadow: var(--shadow-hard);
+}
+
+.hard-shadow-sm {
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.hard-shadow-primary {
+  box-shadow: var(--shadow-hard-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. Layout Helpers
+   -------------------------------------------------------------------------- */
+.container-page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: var(--spacing-margin-desktop);
+  padding-right: var(--spacing-margin-desktop);
+}
+
+@media (max-width: 768px) {
+  .container-page {
+    padding-left: var(--spacing-margin-mobile);
+    padding-right: var(--spacing-margin-mobile);
+  }
+
+  .font-headline-xl {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .font-headline-lg {
+    font-size: clamp(1.5rem, 6vw, 1.875rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Page Header Annotation Style
+   -------------------------------------------------------------------------- */
+.page-annotation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-label-caps);
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label-caps);
+}
+
+.page-annotation::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--outline-variant);
+}
+
+/* --------------------------------------------------------------------------
+   8. Section Heading Style
+   -------------------------------------------------------------------------- */
+.section-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-caps);
+  font-weight: var(--weight-label-caps);
+  letter-spacing: var(--tracking-label-caps);
+  text-transform: uppercase;
+  color: var(--primary);
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Chip / Tag Style
+   -------------------------------------------------------------------------- */
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container);
+  line-height: 1.4;
+}
