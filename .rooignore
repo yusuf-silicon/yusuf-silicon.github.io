@@ -1,0 +1,5 @@
+extra/
+
+archive/*
+!archive/stitch_ui_reference/
+!archive/stitch_ui_reference/**
