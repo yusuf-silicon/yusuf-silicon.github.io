@@ -147,7 +147,12 @@
             "title": "Evaluation of RISC-V System-on-Chip (SoC) Interface Architecture",
 
             "description": "Designed and implemented a RISC-V System-on-Chip (SoC) integrating a single-cycle processor with a ChaCha20 cryptographic accelerator through a memory-mapped interface. The project explored how processor instructions can control and coordinate dedicated hardware accelerators within a unified architecture. Developed in SystemVerilog and deployed on a Xilinx Artix-7 FPGA, the system successfully demonstrated processor-to-accelerator communication, memory transactions, and hardware-assisted encryption.",
-            
+            "category": [
+              "RISC-V",
+              "System-on-Chip",
+              "Cryptographic Hardware"
+            ],
+
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",
             "status": "Completed",
@@ -158,8 +163,13 @@
           },
           {
             "title": "Internet of Everything: A Study of Next-Generation Connected Systems",
-            
             "description": "Conducted an academic study exploring the Internet of Everything (IoE) paradigm, examining the integration of people, devices, data, and processes within large-scale connected environments. Investigated decentralized data processing, intelligent decision-making, cloud and edge computing integration, and the relationship between IoE and emerging technologies such as AI, IoT, and machine learning.",
+            "category": [
+              "Internet of Everything",
+              "IoT",
+              "Cloud Computing",
+              "Edge Computing"
+            ],
             
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",

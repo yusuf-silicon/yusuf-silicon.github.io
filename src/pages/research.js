@@ -118,19 +118,34 @@ function renderSystemMetrics(profile) {
 
 /**
  * [CURRENT_INVESTIGATIONS]
- * Right column — 2-column investigation cards from interests.overview.
+ * Right column — shows only theses with status "active".
+ * If none active, displays an empty-state message.
  */
-function renderCurrentInvestigations(interests) {
-  const areas = interests?.overview || [];
-  if (!areas.length) return '';
+function renderCurrentInvestigations(theses) {
+  const active = (theses || []).filter(t => t.status === 'active');
 
-  const cards = areas
-    .map((a, i) => {
+  if (!active.length) {
+    return `
+      <section class="content-section research-section">
+        <div class="font-label-caps research-section-heading content-section-label">
+          <span class="section-label-dot"></span> [CURRENT_INVESTIGATIONS]
+        </div>
+        <div class="investigations-empty">
+          <p class="font-body-md investigations-empty-text">No active research in progress. Interested in collaborating? Feel free to reach out.</p>
+        </div>
+      </section>
+    `;
+  }
+
+  const cards = active
+    .map((t, i) => {
+      const cats = (t.category || []).map(c => `<span class="chip chip-sm chip-investigation">${c.toUpperCase().replace(/\s+/g, '_')}</span>`).join('');
       return `
         <div class="investigation-card">
           <span class="investigation-card-number font-mono-data">#${String(i + 1).padStart(3, '0')}</span>
-          <h3 class="font-headline-md investigation-card-title">${a.name}</h3>
-          <p class="font-body-sm investigation-card-desc research-text-justify">${a.description || ''}</p>
+          <h3 class="font-headline-md investigation-card-title">${t.title || ''}</h3>
+          <p class="font-body-sm investigation-card-desc research-text-justify">${t.description || ''}</p>
+          ${cats ? `<div class="investigation-card-chips">${cats}</div>` : ''}
         </div>
       `;
     })
@@ -183,12 +198,13 @@ function renderFutureDirections(theses, futureProjects) {
 
 /**
  * [EVOLUTION_TIMELINE]
- * Right column — completed thesis timeline with nodes and dates.
+ * Right column — completed thesis timeline (status !== 'active').
  */
 function renderEvolutionTimeline(theses) {
-  if (!theses || !theses.length) return '';
+  const completed = (theses || []).filter(t => t.status !== 'active');
+  if (!completed.length) return '';
 
-  const entries = theses
+  const entries = completed
     .map((t, i) => {
       const dateRange = formatDateRange(t.start_date, t.end_date);
       const isFirst = i === 0;
@@ -240,7 +256,12 @@ function researchRender(profile) {
   return `
     <div class="research-page">
       <div class="container-page research-page-inner blueprint-grid-lines">
-        ${renderAnnotation('02', 'RESEARCH_MANIFESTO')}
+        <div class="pubs-header">
+          ${renderAnnotation('02', 'RESEARCH_MANIFESTO')}
+          <div class="pubs-header-bottom" style="margin-bottom: 0;">
+            <h1 class="font-headline-xl pubs-title">Research Repository</h1>
+          </div>
+        </div>
 
         <div class="research-grid">
           <aside class="research-sidebar">
@@ -249,7 +270,7 @@ function researchRender(profile) {
           </aside>
 
           <section class="research-content">
-            ${renderCurrentInvestigations(interests)}
+            ${renderCurrentInvestigations(theses)}
             ${renderFutureDirections(theses, futureProjects)}
             ${renderEvolutionTimeline(theses)}
           </section>

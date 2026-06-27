@@ -217,10 +217,10 @@ function renderFullBibliography(publications) {
 }
 
 // ---------------------------------------------------------------------------
-// Page Render Function
+// Page Render Function (synchronous — no await, instant render)
 // ---------------------------------------------------------------------------
 
-async function publicationsRender(profile) {
+function publicationsRender(profile) {
   if (!profile) {
     return `<div class="container-page" style="padding-top: 4rem;">
       <p class="font-mono-data" style="color: var(--error);">No profile data available.</p>
@@ -229,12 +229,6 @@ async function publicationsRender(profile) {
 
   const publications = profile.research?.publications || [];
 
-  // Try fetching Google Scholar citations
-  let citationCounts = null;
-  try {
-    citationCounts = await fetchCitations();
-  } catch { /* ignore */ }
-
   return `
     <div class="pubs-page">
       <div class="container-page pubs-page-inner blueprint-grid-lines">
@@ -242,8 +236,8 @@ async function publicationsRender(profile) {
 
         <div class="pubs-grid">
           <aside class="pubs-sidebar">
-            ${renderSelectedWorks(publications, citationCounts)}
-            ${renderMetricsLog(publications, citationCounts)}
+            ${renderSelectedWorks(publications, null)}
+            ${renderMetricsLog(publications, null)}
           </aside>
 
           <section class="pubs-content">
@@ -260,6 +254,21 @@ async function publicationsRender(profile) {
 // ---------------------------------------------------------------------------
 
 export function mountPublicationsPage() {
+  // --- Fetch Google Scholar citations in background (non-blocking) ---
+  const profile = window.__profile;
+  const publications = profile?.research?.publications || [];
+  if (publications.length) {
+    fetchCitations().then(counts => {
+      if (!counts) return;
+      // Update metrics log
+      const metricValues = document.querySelectorAll('.pubs-metric-value');
+      if (metricValues.length >= 2) {
+        const total = counts.reduce((s, c) => s + c, 0);
+        metricValues[0].textContent = total;
+      }
+    });
+  }
+
   // --- Search filter ---
   const searchInput = document.getElementById('pubSearchInput');
   const bibliographyList = document.getElementById('bibliographyList');

@@ -261,7 +261,7 @@ function renderHardwareHardRepo(projects) {
       return `
         <div class="project-card">
           <div class="project-card-thumb">
-            <img src="${thumb}" alt="${p.title}" />
+            <img src="${thumb}" alt="${p.title}" loading="lazy" />
             <div class="project-card-status font-mono-data">STATUS: ${(p.status || '').toUpperCase()}</div>
           </div>
           <div class="project-card-body">
