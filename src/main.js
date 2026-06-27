@@ -8,43 +8,14 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/components.css';
 import { loadProfile, getProfile } from './lib/dataLoader.js';
+import { getRoute, getCurrentRoute } from './lib/router.js';
 import { renderHeader, mountHeader } from './components/header.js';
 import { renderFooter } from './components/footer.js';
 import { renderThemeToggle, mountThemeToggle, syncIcon } from './components/themeToggle.js';
 
-// ---------------------------------------------------------------------------
-// Route Registry — pages register themselves via registerRoute()
-// ---------------------------------------------------------------------------
-/** @type {Object<string, {render: (profile: Object) => string}>} */
-const routes = {};
-
-/**
- * Register a page route for SPA navigation.
- * Called by each page module during initialization.
- * @param {string} path  — route path (e.g., 'home', 'research')
- * @param {{render: (profile: Object) => string}} config — page config with render function
- */
-export function registerRoute(path, config) {
-  routes[path.toLowerCase()] = config;
-}
-
-/**
- * Navigate to a given route by updating the URL hash.
- * @param {string} path — route path (e.g., 'home', 'projects')
- */
-export function navigateTo(path) {
-  window.location.hash = `#/${path}`;
-}
-
-/**
- * Get the current route from the URL hash.
- * Defaults to 'home' if no hash or unrecognised path.
- * @returns {string} Current route path
- */
-export function getCurrentRoute() {
-  const hash = window.location.hash.slice(1) || '/home';
-  return hash.replace(/^\//, '').toLowerCase();
-}
+// Register page routes (importing triggers self-registration via registerRoute)
+import './pages/home.js';
+import { mountHomePage } from './pages/home.js';
 
 // ---------------------------------------------------------------------------
 // DOM References
@@ -68,7 +39,7 @@ function renderShell() {
 function renderCurrentRoute() {
   const page = getCurrentRoute();
   const profile = getProfile();
-  const route = routes[page];
+  const route = getRoute(page);
   const content = document.getElementById('page-content');
 
   if (!content) return;
@@ -76,7 +47,7 @@ function renderCurrentRoute() {
   if (route && route.render) {
     content.innerHTML = route.render(profile);
   } else if (page === 'home') {
-    // Home is default — render a placeholder until Stage C
+    // Home is default — render a placeholder until a page registers
     content.innerHTML = `<div class="container-page" style="padding-top: 4rem; padding-bottom: 4rem;">
       <p class="font-mono-data" style="color: var(--on-surface-variant);">// PAGE: HOME — Coming in Stage C</p>
     </div>`;
@@ -157,10 +128,13 @@ async function init() {
     footerEl.innerHTML = renderFooter(profile);
   }
 
-  // 5. Set up SPA routing
+  // 5. Mount persistent page-level handlers (citation copy, etc.)
+  mountHomePage();
+
+  // 6. Set up SPA routing
   window.addEventListener('hashchange', renderCurrentRoute);
 
-  // 6. Render the initial route (defaults to home)
+  // 7. Render the initial route (defaults to home)
   renderCurrentRoute();
 
   console.log('🔧 Yusuf Silicon Portfolio — Ready');

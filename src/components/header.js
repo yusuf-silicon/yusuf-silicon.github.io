@@ -4,7 +4,7 @@
    Driven by JSON data and the SPA router.
    ========================================================================== */
 
-import { navigateTo, getCurrentRoute } from '../main.js';
+import { navigateTo, getCurrentRoute } from '../lib/router.js';
 
 // ---------------------------------------------------------------------------
 // Navigation Order (mapped from profile.json personal name / fixed order)

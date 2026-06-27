@@ -7,7 +7,7 @@
     "citizenship": "United States",
     "location": "India",
     "image": "../images/personal/profile_picture.png",
-    "image_name": "Amity Campus"
+    "image_name": "Amity_Campus"
 },
 
 "interests": {
@@ -150,33 +150,35 @@
             "title": "Evaluation of RISC-V System-on-Chip (SoC) Interface Architecture",
 
             "description": "Designed and implemented a RISC-V System-on-Chip (SoC) integrating a single-cycle processor with a ChaCha20 cryptographic accelerator through a memory-mapped interface. The project explored how processor instructions can control and coordinate dedicated hardware accelerators within a unified architecture. Developed in SystemVerilog and deployed on a Xilinx Artix-7 FPGA, the system successfully demonstrated processor-to-accelerator communication, memory transactions, and hardware-assisted encryption.",
-
+            
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",
-
+            
             "start_date": "2025-12-08",
             "end_date": "2026-03-20"
-
-        },
-        {
+            
+          },
+          {
             "title": "Internet of Everything: A Study of Next-Generation Connected Systems",
-
+            
             "description": "Conducted an academic study exploring the Internet of Everything (IoE) paradigm, examining the integration of people, devices, data, and processes within large-scale connected environments. Investigated decentralized data processing, intelligent decision-making, cloud and edge computing integration, and the relationship between IoE and emerging technologies such as AI, IoT, and machine learning.",
-
+            
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",
-
+            
             "start_date": "2023-06-04",
             "end_date": "2023-07-02"
-        }
-    ],
+          }
+        ],
+
 
     "publications": [
       {
           "title": "Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems",
   
           "description": "Implemented and evaluated a low-power ChaCha20 hardware accelerator at the RTL level. The design uses a serialized 32-bit datapath and memory-mapped interface to support efficient cryptographic acceleration in embedded SoC environments while minimizing dynamic power consumption.",
-  
+          "citation": "Y. Ahmad and K. K. Singh, 'Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems', 2026 2nd International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI), Greater Noida, (Delhi NCR), India, 2026, pp. 490-495, doi: 10.1109/IC3ECSBHI67834.2026.11469110. keywords: {Radio broadcasting;Frequency modulation;Field programmable gate arrays;Register transfer level;System-on-chip;Flip-flops;Central Processing Unit;Circuits and systems;Integrated circuits;Microprocessors;ChaCha20;hardware accelerator;low power design;RTL implementation;memory mapped interface},",
+
           "authors": [
               "Yusuf Ahmad",
               "Dr. Kamlesh Kumar Singh"
@@ -198,7 +200,8 @@
           "title": "Low Power Encryption for IoT Devices using FPGA and Microcontroller",
   
           "description": "Designed and evaluated a lightweight hardware encryption architecture for resource-constrained embedded systems. The VHDL-based design combines dynamic LFSR key evolution, SPI interfacing, and FPGA implementation to provide secure communication with low power and hardware overhead.",
-  
+          "citation": "Y. Ahmad and K. K. Singh, 'Low Power Encryption for IoT Devices using FPGA and Microcontroller,' 2025 IEEE International Conference on Communication Networks and Computing (CNC), Sonbhadra, India, 2025, pp. 1009-1013, doi: 10.1109/CNC68716.2025.11484880. keywords: {Payloads;Field programmable gate arrays;Microcontrollers;System-on-chip;Flip-flops;Very large scale integration;Integrated circuits;Circuits;Microprocessors;Power dissipation;Encryption;FPGA;Spartan-7;VHDL;LFSR;XOR;SPI;Low-Power Design;Embedded Security},",
+          
           "authors": [
               "Yusuf Ahmad",
               "Dr. Kamlesh Kumar Singh"
