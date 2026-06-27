@@ -41,6 +41,7 @@ function renderIdCard(personal, interests) {
   const name = personal?.name || '';
   const headline = personal?.headline || '';
   const description = personal?.description || '';
+  const highlights = personal?.description_highlight || [];
   const image = img(personal?.image);
   const tags = (interests?.researchInterests || []).slice(0, 4);
 
@@ -48,16 +49,30 @@ function renderIdCard(personal, interests) {
     .map(t => `<span class="chip">${t.toUpperCase().replace(/\s+/g, '_')}</span>`)
     .join('');
 
+  // Highlight specific words in the description with primary color
+  let highlightedDesc = description;
+  if (highlights.length) {
+    // Sort by length (longest first) to avoid partial replacements
+    const sorted = [...highlights].sort((a, b) => b.length - a.length);
+    for (const word of sorted) {
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      highlightedDesc = highlightedDesc.replace(
+        new RegExp(`(${escaped})`, 'gi'),
+        '<span class="home-highlight">$1</span>'
+      );
+    }
+  }
+
   return `
     <section class="home-section">
       <div class="home-id-card">
         <div class="home-id-card-text">
-          <div class="font-label-caps page-section-label">
+          <div class="font-label-caps page-section-label id-card-label">
             <span class="section-label-dot"></span> [ID_CARD // USER_PROFILE]
           </div>
           <h1 class="font-headline-xl home-name">${name}</h1>
           <p class="font-body-lg home-headline">${headline}</p>
-          <p class="font-body-md home-description">${description}</p>
+          <p class="font-body-md home-description">${highlightedDesc}</p>
           <div class="home-tags">${tagChips}</div>
         </div>
         <div class="home-id-card-image-wrapper">

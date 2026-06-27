@@ -15,6 +15,7 @@ import { renderThemeToggle, mountThemeToggle, syncIcon } from './components/them
 
 // Register page routes (importing triggers self-registration via registerRoute)
 import './pages/home.js';
+import './pages/research.js';
 import { mountHomePage } from './pages/home.js';
 
 // ---------------------------------------------------------------------------

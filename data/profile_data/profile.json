@@ -4,6 +4,11 @@
     "nickname": "yusuf-silicon",
     "headline": "Computer Architecture, RTL & Hardware Security",
     "description": "Interested in processor design, memory systems, AI accelerators, and cryptographic hardware for efficient next-generation computing.",   
+    "description_highlight": [
+      "processor design",
+      "AI accelerators", 
+      "cryptographic hardware"
+    ],
     "citizenship": "United States",
     "location": "India",
     "image": "../images/personal/profile_picture.png",
@@ -69,26 +74,18 @@
 },
 
 "future_projects": {
-    "projects": [
+    "research": [
         {
-            "id": "PROJECT_01",
             "title": "RISC-V SoC with Hardware Accelerators",
             "description": "Design a complete RISC-V based System-on-Chip integrating custom RTL IPs, memory-mapped peripherals, and hardware accelerators through standardized interconnects."
         },
         {
-            "id": "PROJECT_02",
-            "title": "Out-of-Order RISC-V Processor",
-            "description": "Implement an out-of-order RISC-V processor featuring dynamic scheduling, speculative execution, branch prediction, and advanced memory subsystems."
-        },
-        {
-            "id": "PROJECT_03",
             "title": "Neural Network Hardware Accelerator",
             "description": "Develop a configurable hardware accelerator for machine learning inference, focusing on performance, scalability, and energy-efficient execution."
         },
         {
-            "id": "PROJECT_04",
-            "title": "Hardware Security Extensions",
-            "description": "Investigate architectural techniques for secure processor design, including cryptographic accelerators, memory protection, and side-channel resistant hardware."
+            "title": "Out-of-Order RISC-V Processor",
+            "description": "Implement an out-of-order RISC-V processor featuring dynamic scheduling, speculative execution, branch prediction, and advanced memory subsystems."
         }
     ]
 },
@@ -153,7 +150,8 @@
             
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",
-            
+            "status": "Completed",
+
             "start_date": "2025-12-08",
             "end_date": "2026-03-20"
             
@@ -165,7 +163,8 @@
             
             "institution": "Amity University",
             "advisor": "Dr. Kamlesh Kumar Singh",
-            
+            "status": "Completed",
+
             "start_date": "2023-06-04",
             "end_date": "2023-07-02"
           }
