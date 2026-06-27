@@ -726,14 +726,16 @@
         "title": "IEEE Conference Publication",
         "description": "Published 'Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems' at the 2026 International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI).",
         "year": 2026,
-        "category": "Publication"
+        "category": "Publication",
+        "featured": true
     },
 
     {
         "title": "IEEE Conference Publication",
         "description": "Published 'Low Power Encryption for IoT Devices using FPGA and Microcontroller' at the 2025 IEEE International Conference on Communication Networks and Computing (CNC).",
         "year": 2025,
-        "category": "Publication"
+        "category": "Publication",
+        "featured": true
     },    
 
     {
@@ -741,21 +743,24 @@
         "description": "Presented research work in oral/poster format at the International Conference on Sustainable Development and Disaster Resilience Through Innovation (ICSDDRTI 2023), organized by Amity School of Applied Sciences, Amity University Uttar Pradesh, Lucknow.",
         "year": 2023,
         "category": "Conference Presentation",
-        "organization": "Amity University Uttar Pradesh, Lucknow"
+        "organization": "Amity University Uttar Pradesh, Lucknow",
+        "featured": true
     },    
     
     {
         "title": "Rank 1 in Higher Secondary Education",
         "description": "Graduated as the top-ranked student in Higher Secondary Education (Science Stream) at Staford School, Lucknow.",
         "year": 2022,
-        "category": "Academic"
+        "category": "Academic",
+        "featured": true
     },
 
     {
         "title": "Rank 3 in Secondary Education",
         "description": "Graduated among the top-ranked students in Secondary Education at Staford School, Lucknow.",
         "year": 2020,
-        "category": "Academic"
+        "category": "Academic",
+        "featured": false
     }
 ],
 

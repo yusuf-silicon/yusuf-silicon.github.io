@@ -17,6 +17,7 @@ import { renderThemeToggle, mountThemeToggle, syncIcon } from './components/them
 import './pages/home.js';
 import './pages/research.js';
 import './pages/publications.js';
+import './pages/academics.js';
 import { mountHomePage } from './pages/home.js';
 import { mountPublicationsPage } from './pages/publications.js';
 

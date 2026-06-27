@@ -1310,7 +1310,331 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. MOBILE (<768px)
+   9. ACADEMICS PAGE
+   -------------------------------------------------------------------------- */
+
+.academics-page {
+  min-height: 100%;
+}
+
+.academics-page-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* --- Page Header --- */
+.academics-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.academics-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.academics-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+}
+
+.academics-tag-label {
+  font-size: 0.625rem;
+  color: var(--outline);
+}
+
+.academics-tag-value {
+  font-size: var(--text-mono-data);
+  font-weight: 600;
+  color: var(--on-surface);
+}
+
+/* --- Two-Column Grid --- */
+.academics-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-column-gap);
+}
+
+.academics-primary {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.academics-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+/* --- Section Header --- */
+.academics-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.academics-section-title {
+  color: var(--on-surface);
+  white-space: nowrap;
+}
+
+.academics-section-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--outline-variant);
+}
+
+/* --- Education Cards --- */
+.edu-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.edu-card {
+  position: relative;
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container-lowest);
+}
+
+.edu-card--current {
+  border-color: var(--outline);
+}
+
+.edu-card-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: -0.75rem;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.625rem;
+}
+
+.edu-card-inner {
+  padding: 2rem;
+}
+
+.edu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.edu-card-degree {
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.edu-card-institution {
+  color: var(--on-surface-variant);
+}
+
+.edu-card-dates {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.edu-card-year {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: var(--text-mono-data);
+}
+
+.edu-card-enrolment {
+  font-size: 0.625rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.25rem;
+}
+
+.edu-card-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border-top: 1px solid var(--outline-variant);
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 1.25rem 0;
+}
+
+.edu-card-metric-label {
+  font-size: 0.625rem;
+  color: var(--outline);
+  margin-bottom: 0.25rem;
+}
+
+.edu-card-metric-value {
+  color: var(--on-surface);
+  font-weight: 600;
+}
+
+.edu-card-metric-text {
+  color: var(--on-surface);
+  font-weight: 500;
+}
+
+/* --- Thesis Cards --- */
+.thesis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.thesis-card {
+  border: 1px solid var(--outline-variant);
+  padding: 1.25rem;
+  background-color: var(--surface-container-lowest);
+  transition: border-color 0.2s ease;
+}
+
+.thesis-card:hover {
+  border-color: var(--primary);
+}
+
+.thesis-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.thesis-card-code {
+  font-size: 0.6875rem;
+  color: var(--on-surface-variant);
+  background-color: var(--surface-container);
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--outline-variant);
+}
+
+.thesis-card-year {
+  font-size: var(--text-mono-data);
+  color: var(--primary);
+}
+
+.thesis-card-title {
+  color: var(--on-surface);
+  margin-bottom: 0.5rem;
+  font-size: var(--text-body-md);
+  font-weight: 600;
+}
+
+.thesis-card-desc {
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+.thesis-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.thesis-card-advisor {
+  font-size: var(--text-mono-data);
+  color: var(--on-surface-variant);
+  margin-top: 0.5rem;
+}
+
+/* --- Sidebar Sections --- */
+.academics-sidebar-section {
+  margin-bottom: 0;
+}
+
+.academics-sidebar-heading {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label-caps);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Awards Timeline --- */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.award-item {
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--outline-variant);
+}
+
+.award-dot {
+  position: absolute;
+  left: -0.3125rem;
+  top: 0.375rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--primary);
+}
+
+.award-year {
+  color: var(--primary);
+  font-size: var(--text-mono-data);
+  margin-bottom: 0.25rem;
+}
+
+.award-title {
+  color: var(--on-surface);
+  font-weight: 600;
+  margin-bottom: 0.125rem;
+}
+
+.award-desc {
+  color: var(--on-surface-variant);
+  text-align: justify;
+}
+
+/* --- Certifications List --- */
+.certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+}
+
+.cert-name {
+  font-size: var(--text-mono-data);
+  color: var(--on-surface);
+}
+
+.cert-icon {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. MOBILE (<768px)
    -------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -1455,5 +1779,35 @@
 
   .pub-entry-header {
     flex-direction: column;
+  }
+
+  /* --- Academics Page Mobile --- */
+  .academics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academics-sidebar {
+    position: static;
+  }
+
+  .edu-card-header {
+    flex-direction: column;
+  }
+
+  .edu-card-dates {
+    text-align: left;
+  }
+
+  .edu-card-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .thesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academics-section-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
