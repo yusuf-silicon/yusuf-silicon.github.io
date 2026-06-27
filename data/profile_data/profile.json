@@ -177,6 +177,7 @@
   
           "description": "Implemented and evaluated a low-power ChaCha20 hardware accelerator at the RTL level. The design uses a serialized 32-bit datapath and memory-mapped interface to support efficient cryptographic acceleration in embedded SoC environments while minimizing dynamic power consumption.",
           "citation": "Y. Ahmad and K. K. Singh, 'Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems', 2026 2nd International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI), Greater Noida, (Delhi NCR), India, 2026, pp. 490-495, doi: 10.1109/IC3ECSBHI67834.2026.11469110. keywords: {Radio broadcasting;Frequency modulation;Field programmable gate arrays;Register transfer level;System-on-chip;Flip-flops;Central Processing Unit;Circuits and systems;Integrated circuits;Microprocessors;ChaCha20;hardware accelerator;low power design;RTL implementation;memory mapped interface},",
+          "abstract": "ChaCha20 is a stream cipher widely adopted in modern communication systems due to its simplicity and strong cryptographic properties. While software implementations are common, hardware acceleration is often required in embedded and resource constrained systems to meet performance and power constraints. This work presents a register transfer level implementation of a ChaCha20 encryption core designed with an emphasis on low dynamic power consumption. The proposed design employs a serialized 32 bit data path, reducing switching activity at the cost of increased latency, which is acceptable for low throughput and control oriented applications. The architecture is organized around a memory mapped interface to support integration as a peripheral accelerator in processor based systems. The design is described entirely at the RTL level and evaluated through synthesis and power analysis. Implementation results are used to examine the impact of architectural trade offs on power, timing, and resource utilization without modifying the underlying cryptographic algorithm.",
 
           "authors": [
               "Yusuf Ahmad",
@@ -188,6 +189,7 @@
           "venue": "2026 2nd International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI)",
           "venue_short": "IC3ECSBHI_2026",
           "publisher": "IEEE",
+          "featured": true,
   
           "year": 2026,
           "month": "February",
@@ -200,7 +202,8 @@
   
           "description": "Designed and evaluated a lightweight hardware encryption architecture for resource-constrained embedded systems. The VHDL-based design combines dynamic LFSR key evolution, SPI interfacing, and FPGA implementation to provide secure communication with low power and hardware overhead.",
           "citation": "Y. Ahmad and K. K. Singh, 'Low Power Encryption for IoT Devices using FPGA and Microcontroller,' 2025 IEEE International Conference on Communication Networks and Computing (CNC), Sonbhadra, India, 2025, pp. 1009-1013, doi: 10.1109/CNC68716.2025.11484880. keywords: {Payloads;Field programmable gate arrays;Microcontrollers;System-on-chip;Flip-flops;Very large scale integration;Integrated circuits;Circuits;Microprocessors;Power dissipation;Encryption;FPGA;Spartan-7;VHDL;LFSR;XOR;SPI;Low-Power Design;Embedded Security},",
-          
+          "abstract": "This paper presents the design and simulation of a low-power encryption module for secure data transmission in sensor-driven systems. The proposed lightweight encryption engine is described in VHDL, interfaced with a microcontroller through the SPI protocol, and synthesized using Xilinx Vivado with constraints targeting a Spartan-7 FPGA. The encryption scheme employs XOR-based logic with LFSR-driven key evolution and optional bit-position scrambling. Security, performance, and estimated power metrics, derived from Vivado synthesis and implementation reports, are discussed in relation to AES, DES, and RSA. Results indicate that the proposed design is suitable for energy-constrained embedded applications.",
+
           "authors": [
               "Yusuf Ahmad",
               "Dr. Kamlesh Kumar Singh"
@@ -210,8 +213,8 @@
   
           "venue": "2025 IEEE International Conference on Communication Networks and Computing (CNC)",
           "venue_short": "CNC_2025",
-
           "publisher": "IEEE",
+          "featured": true,
   
           "year": 2025,
           "month": "December",

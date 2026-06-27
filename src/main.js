@@ -16,7 +16,9 @@ import { renderThemeToggle, mountThemeToggle, syncIcon } from './components/them
 // Register page routes (importing triggers self-registration via registerRoute)
 import './pages/home.js';
 import './pages/research.js';
+import './pages/publications.js';
 import { mountHomePage } from './pages/home.js';
+import { mountPublicationsPage } from './pages/publications.js';
 
 // ---------------------------------------------------------------------------
 // DOM References
@@ -37,7 +39,7 @@ function renderShell() {
 // ---------------------------------------------------------------------------
 // Route Renderer
 // ---------------------------------------------------------------------------
-function renderCurrentRoute() {
+async function renderCurrentRoute() {
   const page = getCurrentRoute();
   const profile = getProfile();
   const route = getRoute(page);
@@ -46,20 +48,20 @@ function renderCurrentRoute() {
   if (!content) return;
 
   if (route && route.render) {
-    content.innerHTML = route.render(profile);
+    const html = await route.render(profile);
+    content.innerHTML = html;
+    // Call mount callback if provided (for post-render DOM setup)
+    if (route.mount) route.mount();
   } else if (page === 'home') {
-    // Home is default — render a placeholder until a page registers
     content.innerHTML = `<div class="container-page" style="padding-top: 4rem; padding-bottom: 4rem;">
       <p class="font-mono-data" style="color: var(--on-surface-variant);">// PAGE: HOME — Coming in Stage C</p>
     </div>`;
   } else {
-    // Unknown route — fallback
     content.innerHTML = `<div class="container-page" style="padding-top: 4rem; padding-bottom: 4rem;">
       <p class="font-mono-data" style="color: var(--on-surface-variant);">// PAGE: ${page.toUpperCase()} — Under construction</p>
     </div>`;
   }
 
-  // Notify header to update active nav link
   if (window.__updateActiveNav) {
     window.__updateActiveNav(page);
   }
@@ -129,8 +131,9 @@ async function init() {
     footerEl.innerHTML = renderFooter(profile);
   }
 
-  // 5. Mount persistent page-level handlers (citation copy, etc.)
+  // 5. Mount persistent page-level handlers (citation copy, publications, etc.)
   mountHomePage();
+  mountPublicationsPage();
 
   // 6. Set up SPA routing
   window.addEventListener('hashchange', renderCurrentRoute);
