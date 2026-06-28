@@ -1900,6 +1900,10 @@
 }
 
 /* --- Image Rotator --- */
+#exp-image-container {
+  transition: opacity 0.35s ease;
+}
+
 .exp-rotator-media {
   display: flex;
   flex-direction: column;
@@ -1948,7 +1952,7 @@
 
 /* --- LOC Typing Animation --- */
 .exp-loc-cursor {
-  animation: exp-blink 0.8s step-end infinite;
+  animation: exp-blink 0.5s step-end infinite;
 }
 
 @keyframes exp-blink {

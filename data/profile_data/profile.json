@@ -164,8 +164,7 @@
         },
 
         "description": [
-          "Completed an industrial internship focused on VLSI-based IC design methodologies, RTL development, FPGA implementation, and digital hardware design workflows. Implemented a low-power encryption system using FPGA and microcontroller co-design as the primary internship project.",
-          "Completed this is second thingy ."
+          "Completed an industrial internship focused on VLSI-based IC design methodologies, RTL development, FPGA implementation, and digital hardware design workflows. Implemented a low-power encryption system using FPGA and microcontroller co-design as the primary internship project."
         ],
 
         "tech_stack": [
@@ -773,7 +772,6 @@
         "start_date": "2023-12-12",
         "end_date": "2024-03-04",
         "description": [
-          "Led a community outreach initiative focused on educating underprivileged children about fundamental rights, equality, education, and social responsibility. Organized awareness activities, educational sessions, and engagement programs aimed at empowering children from underserved communities through knowledge and community participation.",
           "Led a community outreach initiative focused on educating underprivileged children about fundamental rights, equality, education, and social responsibility. Organized awareness activities, educational sessions, and engagement programs aimed at empowering children from underserved communities through knowledge and community participation."
         ],
                 "mentions": {
@@ -836,7 +834,7 @@
         "description": "Graduated among the top-ranked students in Secondary Education at Staford School, Lucknow.",
         "year": 2020,
         "category": "Academic",
-        "featured": false
+        "featured": true
     }
 ],
 

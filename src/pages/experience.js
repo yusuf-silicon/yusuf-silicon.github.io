@@ -93,9 +93,17 @@ export function mountExperiencePage(){
                     setTimeout(()=>{
                       let next;do{next=pics[Math.floor(Math.random()*pics.length)];}while(next===p&&pics.length>1);
                       const pre=new Image();
-                      pre.onload=()=>{currentPic=next;ic.innerHTML=renderPic(next);typeAndCycle(next);};
+                      pre.onload=()=>{
+                        ic.style.opacity='0';
+                        setTimeout(()=>{
+                          currentPic=next;
+                          ic.innerHTML=renderPic(next);
+                          ic.style.opacity='1';
+                          typeAndCycle(next);
+                        },200);
+                      };
                       pre.src=next.url;
-                    },1600);
+                    },500);
                   }
                 }
                 setTimeout(eraseDesc,100);
