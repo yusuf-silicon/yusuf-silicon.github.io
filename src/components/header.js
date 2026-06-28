@@ -87,6 +87,16 @@ export function mountHeader() {
     if (link) {
       e.preventDefault();
       const path = link.dataset.route;
+      // Close hamburger menu on navigation
+      const nav = document.getElementById('header-nav');
+      const hamburger = document.getElementById('header-hamburger');
+      if (nav && nav.classList.contains('header-nav--open')) {
+        nav.classList.remove('header-nav--open');
+        if (hamburger) {
+          const icon = hamburger.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = 'menu';
+        }
+      }
       navigateTo(path);
     }
   });

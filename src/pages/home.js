@@ -43,7 +43,7 @@ function renderIdCard(personal, interests) {
   const description = personal?.description || '';
   const highlights = personal?.description_highlight || [];
   const image = img(personal?.image);
-  const tags = (interests?.researchInterests || []).slice(0, 4);
+  const tags = interests?.description_mentions || [];
 
   const tagChips = tags
     .map(t => `<span class="chip">${t.toUpperCase().replace(/\s+/g, '_')}</span>`)
@@ -77,9 +77,9 @@ function renderIdCard(personal, interests) {
         </div>
         <div class="home-id-card-image-wrapper">
           <div class="home-id-card-image-border">
-            <img class="home-id-card-image" src="${image}" alt="${personal?.image_name || name}" />
+            <img class="home-id-card-image progressive-image" src="${image}" alt="${personal?.image_name || name}" onload="this.classList.add('progressive-image--loaded')" />
+            <div class="home-image-ref font-mono-data">${personal?.image_name || 'IMG_REF_01.A'}</div>
           </div>
-          <div class="home-image-ref font-mono-data">${personal?.image_name || 'IMG_REF_01.A'}</div>
         </div>
       </div>
     </section>

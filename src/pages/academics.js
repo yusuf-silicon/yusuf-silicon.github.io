@@ -30,7 +30,7 @@ function renderPageHeader(education) {
   const prog = education?.find(e => e.enrolment_number)?.program || 'ELECTRONICS & COMMUNICATION ENGINEERING';
   return `
     <header class="academics-header">
-      ${renderAnnotation('03', 'ACADEMIC_RECORD')}
+      ${renderAnnotation('04', 'ACADEMIC_RECORD')}
       <div class="pubs-header-bottom">
         <h1 class="font-headline-xl pubs-title">Academic History</h1>
       </div>
@@ -60,12 +60,16 @@ function renderEducation(education) {
   const entries = sorted
     .map((e, i) => {
       const isFirst = i === 0;
+      const isCurrent = !e.graduation_year;
       const hasGpa = e.cgpa || e.percentage;
+      const maxVal = e.max_cgpa || e.max_percentage || '';
+      const gpaDisplay = e.cgpa ? `${e.cgpa}${maxVal ? ' / ' + Number(maxVal).toFixed(2) : ''}` : (e.percentage ? `${e.percentage}${maxVal ? ' / ' + Number(maxVal).toFixed(2) : ''}%` : '');
       const yearRange = e.start_year ? `${e.start_year} — ${e.graduation_year || 'PRESENT'}` : `${e.graduation_year || ''}`;
+      const coursework = e.coursework || [];
 
       return `
-        <div class="edu-card ${isFirst ? 'edu-card--current' : ''}">
-          ${isFirst ? '<div class="edu-card-badge font-mono-data">CURRENT</div>' : ''}
+        <div class="edu-card ${isCurrent ? 'edu-card--current' : ''}">
+          ${isCurrent ? '<div class="edu-card-badge font-mono-data">CURRENT</div>' : ''}
           <div class="edu-card-inner">
             <div class="edu-card-header">
               <div>
@@ -78,10 +82,21 @@ function renderEducation(education) {
               </div>
             </div>
             <div class="edu-card-metrics">
-              ${hasGpa ? `<div><p class="font-mono-data edu-card-metric-label">${e.cgpa ? 'CGPA' : 'PERCENTAGE'}</p><p class="font-headline-md edu-card-metric-value">${e.cgpa || (e.percentage + '%') || ''}</p></div>` : ''}
+              ${hasGpa ? `<div><p class="font-mono-data edu-card-metric-label">${e.cgpa ? 'CGPA' : 'PERCENTAGE'}</p><p class="font-headline-md edu-card-metric-value">${gpaDisplay}</p></div>` : ''}
               ${e.advisor ? `<div><p class="font-mono-data edu-card-metric-label">ADVISOR</p><p class="font-body-lg edu-card-metric-text">${e.advisor}</p></div>` : ''}
               ${e.rank ? `<div><p class="font-mono-data edu-card-metric-label">RANK</p><p class="font-body-lg edu-card-metric-text">${e.rank}</p></div>` : ''}
             </div>
+            ${coursework.length ? `
+            <div class="edu-card-coursework">
+              <p class="font-mono-data edu-card-coursework-label">SELECTED_COURSEWORK // ${(e.short_form || e.degree || '').toUpperCase()}</p>
+              <div class="edu-card-coursework-grid">
+                ${coursework.map((c, ci) => `
+                  <div class="edu-card-coursework-item font-mono-data">
+                    <span class="edu-card-coursework-num">${String(ci + 1).padStart(2, '0')}</span> ${c}
+                  </div>
+                `).join('')}
+              </div>
+            </div>` : ''}
           </div>
         </div>
       `;
@@ -119,7 +134,12 @@ function renderResearchThesis(theses) {
           <h4 class="font-headline-md thesis-card-title">${t.title || ''}</h4>
           <p class="font-body-sm thesis-card-desc">${t.description || ''}</p>
           ${cats ? `<div class="thesis-card-chips">${cats}</div>` : ''}
-          ${t.advisor ? `<div class="font-mono-data thesis-card-advisor">ADVISOR: ${t.advisor}</div>` : ''}
+          ${(t.advisor || t.research_lab) ? `
+          <div class="thesis-card-divider"></div>
+          <div class="thesis-card-footer">
+            ${t.advisor ? `<div class="font-mono-data thesis-card-advisor">ADVISOR: ${t.advisor}</div>` : ''}
+            ${t.research_lab ? `<div class="font-mono-data thesis-card-lab">LAB: ${t.research_lab}</div>` : ''}
+          </div>` : ''}
         </div>
       `;
     })
