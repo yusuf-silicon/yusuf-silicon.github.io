@@ -261,7 +261,7 @@ function renderHardwareHardRepo(projects) {
       return `
         <div class="project-card">
           <div class="project-card-thumb">
-            <img src="${thumb}" alt="${p.title}" loading="lazy" />
+            <img src="${thumb}" alt="${p.title}" class="progressive-image" onload="setTimeout(()=>this.classList.add('progressive-image--loaded'),300)" />
             <div class="project-card-status font-mono-data">STATUS: ${(p.status || '').toUpperCase()}</div>
           </div>
           <div class="project-card-body">
@@ -278,7 +278,7 @@ function renderHardwareHardRepo(projects) {
   return `
     <div class="content-section">
       <div class="content-section-header">
-        <div class="font-label-caps page-section-label">04 // HARDWARE_HARD_REPO</div>
+        <div class="font-label-caps page-section-label">04 // HARDWARE_REPO</div>
         <a class="font-mono-data content-section-link" href="#/projects">VIEW_PROJECTS</a>
       </div>
       <div class="project-cards">${cards}</div>
@@ -351,6 +351,11 @@ function homeRender(profile) {
 export function mountHomePage() {
   const content = document.getElementById('page-content');
   if (!content) return;
+
+  // Mark already-loaded progressive images
+  document.querySelectorAll('.progressive-image').forEach(img => {
+    if (img.complete) img.classList.add('progressive-image--loaded');
+  });
 
   // Delegate click events from citation buttons
   content.addEventListener('click', e => {

@@ -23,6 +23,11 @@
       "HTML": ".html",
       "CSS": ".css",
       "JavaScript": ".js"
+    },
+
+    "peer_reviewed_archive": {
+      "card_1_is_publication": false,
+      "card_2_is_publication": true
     }
 },
 
@@ -353,15 +358,22 @@
           "Processor-controlled cryptography"
         ],
 
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "https://github.com/yusuf-silicon/RISC-V-SoC",
         "thumbnail": "../images/projects/vlsi/project 6 - RISC-V SoC/schematic.png",
         "gallery": [
           "../images/projects/vlsi/project 6 - RISC-V SoC/chacha20 input and output.png",
           "../images/projects/vlsi/project 6 - RISC-V SoC/encrypted result in memory.png"
         ],
-        "results": [
-          "../images/projects/vlsi/project 6 - RISC-V SoC/schematic_portrait.pdf"
-        ]
+        "results": {
+          "Schematic": "../images/projects/vlsi/project 6 - RISC-V SoC/schematic_portrait.pdf"
+        }
       },
     
       {
@@ -422,7 +434,7 @@
           "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/quarter round waveform.png",
           "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/tb waveform.png"
         ],
-        "results":[]
+        "results": {}
       },
 
       {
@@ -488,9 +500,9 @@
           "../images/projects/vlsi/project 4 - ChaCha20 Core/tb waveform.png",
           "../images/projects/vlsi/project 4 - ChaCha20 Core/data flow design.png"
         ],
-        "results":[
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/schematic.pdf"
-        ]
+        "results":{
+          "Schematic": "../images/projects/vlsi/project 4 - ChaCha20 Core/schematic.pdf"
+        }
       },
 
       {
@@ -554,9 +566,9 @@
           "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Read.png",
           "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Write.png"
         ],
-        "results":[
-          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/Regression_Summary.txt"
-        ]
+        "results":{
+          "Regression Summary":"../images/projects/vlsi/project 3 - AXI4-Lite Slave/Regression_Summary.txt"
+        }
       },
 
       {
@@ -613,10 +625,10 @@
         "github": "https://github.com/yusuf-silicon/Asynchronous-FIFO",
         "thumbnail": "../images/projects/vlsi/project 2 - Asynchronous FIFO/waveform.png",
         "gallery": [],
-        "results":[
-        "../images/projects/vlsi/project 2 - Asynchronous FIFO/Regression Summary.txt",
-        "../images/projects/vlsi/project 2 - Asynchronous FIFO/UVM Topology and Configuration.txt"
-        ]
+        "results":{
+        "Regression Summary": "../images/projects/vlsi/project 2 - Asynchronous FIFO/Regression Summary.txt",
+        "UVM Topology": "../images/projects/vlsi/project 2 - Asynchronous FIFO/UVM Topology and Configuration.txt"
+        }
       },
 
       {
@@ -681,12 +693,12 @@
           "../images/projects/vlsi/project 1 - LFSR Cipher/schematic.png",
           "../images/projects/vlsi/project 1 - LFSR Cipher/waveform.png"
         ],
-        "results": []
+        "results": {}
       }
 
     ],
 
-    "iot": [
+    "iots": [
             {
         "id": "Fleet Management using Smart Technology",
         "title": "Fleet Management using Smart Technology",
@@ -745,6 +757,13 @@
             "Embedded system prototype development"
         ],
 
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "",
         "thumbnail": "../images/projects/iot/project 1 - Fleet Management using Smart Technology/front view.png",
         "gallery": [
@@ -754,12 +773,13 @@
           "../images/projects/iot/project 1 - Fleet Management using Smart Technology/schematic.png",
           "../images/projects/iot/project 1 - Fleet Management using Smart Technology/top view.png"
         ],
-        "results": []
+        "results": {}
 
 }
     ],
 
     "software": []
+
 },
 
 "communityOutreach": [

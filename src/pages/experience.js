@@ -18,7 +18,7 @@ function experienceRender(profile){
   const pics=[],counters={};
   entries.forEach(e=>{const p=e.pictures;if(!p)return;const src=e.title||e.organization||'U';if(!counters[src])counters[src]={IMG:0,FIG:0};if(p.images)Object.entries(p.images).forEach(([n,u])=>{counters[src].IMG++;pics.push({type:'IMG',num:counters[src].IMG,name:n,url:img(u),source:src});});if(p.figures)Object.entries(p.figures).forEach(([n,u])=>{counters[src].FIG++;pics.push({type:'FIG',num:counters[src].FIG,name:n,url:img(u),source:src});});});
   window.__expPictures=pics;
-  return `<div class="exp-page"><div class="exp-bg-overlay"></div><div class="container-page exp-page-inner"><div class="pubs-header">${renderAnnotation('05','EXPERIENCE_LOG')}<div class="pubs-header-bottom"><h1 class="font-headline-xl pubs-title">Professional Experience</h1></div></div><div class="exp-grid">${renderTimeline(entries)}<aside class="exp-sidebar">${renderLogNavigator(typeMap)}${renderTechStack()}${renderImageRotator(pics)}</aside></div>${renderMetrics(profile,entries)}</div></div>`;
+  return `<div class="exp-page"><div class="exp-bg-overlay"></div><div class="container-page exp-page-inner blueprint-grid-lines"><div class="pubs-header">${renderAnnotation('05','EXPERIENCE_LOG')}<div class="pubs-header-bottom"><h1 class="font-headline-xl pubs-title">Professional Experience</h1></div></div><div class="exp-grid">${renderTimeline(entries)}<aside class="exp-sidebar">${renderLogNavigator(typeMap)}${renderTechStack()}${renderImageRotator(pics)}</aside></div>${renderMetrics(profile,entries)}</div></div>`;
 }
 
 export function mountExperiencePage(){

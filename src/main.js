@@ -16,8 +16,10 @@ import './pages/research.js';
 import './pages/publications.js';
 import './pages/academics.js';
 import './pages/experience.js';
+import './pages/projects.js';
 import { mountHomePage } from './pages/home.js';
 import { mountPublicationsPage } from './pages/publications.js';
+import { mountProjectsPage } from './pages/projects.js';
 
 const app = document.getElementById('app');
 
@@ -88,6 +90,7 @@ async function init() {
 
   mountHomePage();
   mountPublicationsPage();
+  mountProjectsPage();
 
   window.addEventListener('hashchange', renderCurrentRoute);
   renderCurrentRoute();
