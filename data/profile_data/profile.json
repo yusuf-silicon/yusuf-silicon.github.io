@@ -902,33 +902,86 @@
     }
 ],
 
-"hobbies": [
-    {
-        "type": "3D Models",
+"hobbies": {
+    "3D Models": {
         "description": "Creating and designing three-dimensional models using Blender for visualization, prototyping, and artistic expression.",
         "Gallery": [
         {   
-          "image": "../images/hobbies/3d_models/elk.png",
+          "Elk's Skull": "../images/hobbies/3d_models/elk.png",
           "description": "A 3D mesh wireframe model of a deer skull and antlers designed in Blender, showcasing clean edge-flow topology, precise organic sculpting, and a glowing holographic material shader."
         },
         {
-          "image": "../images/hobbies/3d_models/bowling_ally.png", 
-          "description": "A 3D render of a bowling strike simulation designed in Blender, showcasing dynamic physics animation, complex object scattering, and stylized geometric pattern textures."
+          "Bowling Alley": "../images/hobbies/3d_models/bowling_ally.png", 
+          "description": "A 3D model of a bowling alley scene created in Blender, featuring detailed lane textures, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "image": "../images/hobbies/3d_models/bunny_eye.png", 
+          "Bull's Day Out": "../images/hobbies/3d_models/bull_all_stars.png", 
+          "description": "A 3D model of a bull's day out scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "Chicken Island": "../images/hobbies/3d_models/chicken_island.png", 
+          "description": "A 3D model of a chicken island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Chicken Stand Off": "../images/hobbies/3d_models/chicken_stare_off.png", 
+          "description": "A 3D model of a chicken stand-off scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "Morning Bliss": "../images/hobbies/3d_models/coffee_cup.png", 
+          "description": "A 3D model of a morning bliss scene created in Blender, featuring detailed object modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Meta Duck": "../images/hobbies/3d_models/duck_meta.png", 
+          "description": "A 3D model of a meta duck scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "A Night in the Forest": "../images/hobbies/3d_models/forest_night.png", 
+          "description": "A 3D model of a night in the forest scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Block Age 3000": "../images/hobbies/3d_models/future_car.png", 
+          "description": "A 3D model of a futuristic car scene created in Blender, featuring detailed vehicle modeling, realistic materials, and dynamic camera movement."
+        },
+        {
+          "Fountain of Dreams": "../images/hobbies/3d_models/island_scene.png", 
+          "description": "A 3D model of a dreamy island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Sculpture": "../images/hobbies/3d_models/passer_bird.png", 
+          "description": "A 3D model of a sculpted bird scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "Golden Bot 9000": "../images/hobbies/3d_models/robot_test.png", 
+          "description": "A 3D model of a golden robot scene created in Blender, featuring detailed mechanical modeling, realistic materials, and dynamic camera movement."
+        },
+        {
+          "Cozy Living Room": "../images/hobbies/3d_models/room.png", 
+          "description": "A 3D model of a cozy living room scene created in Blender, featuring detailed interior modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Bunny Eye": "../images/hobbies/3d_models/bunny_eye.png", 
           "description": "A 3D close-up render of an organic eye structure designed in Blender, showcasing complex particle hair systems for eyelashes, macro texturing, and realistic glossy material reflections."
         }
-        ]
+      ]
     },
-    {
-        "type": "2D Arts",
+    "2D Arts": {
         "description": "Creating and designing two-dimensional artwork using various media and techniques.",
         "Gallery": [
-
+          {   
+            "image": "../images/hobbies/2d_arts/bowling_alley.png",
+            "description": "A digital abstract artwork created using Adobe Photoshop, featuring vibrant colors, dynamic shapes, and layered textures to evoke a sense of movement and energy."
+          },
+          {
+            "image": "../images/hobbies/2d_arts/island_scene.png", 
+            "description": "A traditional landscape painting created using watercolor on paper, capturing the serene beauty of nature with soft gradients and delicate brushwork."
+          },
+          {
+            "image": "../images/hobbies/2d_arts/room.png", 
+            "description": "A detailed pencil portrait sketch on paper, showcasing realistic shading, fine line work, and expressive facial features."
+          }
         ]
     }
-],
+  },
 
 "contact": {
     "google_scholar": "https://scholar.google.com/citations?user=EJitK1IAAAAJ&hl=en",
@@ -949,5 +1002,4 @@
 }
 
 }
-
 
