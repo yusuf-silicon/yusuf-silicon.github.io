@@ -226,6 +226,10 @@ function renderSidebar(projectsList, allTech, types) {
         <h3 class="font-label-caps proj-sidebar-heading">TOOLCHAIN</h3>
         <div class="proj-skill-chips">${toolChips}</div>
       </div>` : ''}
+      <div class="proj-sidebar-section" id="proj-commit-section">
+        <h3 class="font-label-caps proj-sidebar-heading">COMMIT_LOG // RECENT</h3>
+        <div id="proj-commit-content" class="font-mono-data" style="font-size:0.625rem;color:var(--outline)">Fetching latest commit...</div>
+      </div>
     </aside>
   `;
 }
@@ -269,7 +273,34 @@ function projectsRender(profile) {
 // Mount — attach event listeners
 // ---------------------------------------------------------------------------
 
+async function fetchLatestCommit() {
+  const el = document.getElementById('proj-commit-content');
+  if (!el) return;
+  try {
+    const repos = await fetch('https://api.github.com/users/yusuf-silicon/repos?sort=updated&per_page=1&direction=desc');
+    if (!repos.ok) throw new Error('API error');
+    const repoData = await repos.json();
+    if (!repoData.length) throw new Error('No repos');
+    const repoName = repoData[0].name;
+    const commits = await fetch(`https://api.github.com/repos/yusuf-silicon/${repoName}/commits?per_page=3`);
+    if (!commits.ok) throw new Error('API error');
+    const commitData = await commits.json();
+    if (!commitData.length) throw new Error('No commits');
+    el.innerHTML = commitData.map(c => {
+      const date = new Date(c.commit.author.date).toISOString().split('T')[0];
+      const msg = c.commit.message.split('\n')[0].substring(0, 60);
+      const sha = c.sha.substring(0, 7);
+      return `<div style="border-left:2px solid var(--primary);padding-left:0.5rem;margin-bottom:0.5rem"><div style="color:var(--primary)">${date}</div><div style="color:var(--on-surface-variant);margin-top:0.25rem">${msg}</div><div style="color:var(--outline);margin-top:0.25rem;font-size:0.5625rem">${repoName} @ ${sha}</div></div>`;
+    }).join('');
+  } catch (e) {
+    el.textContent = 'Unable to fetch latest commits.';
+  }
+}
+
 export function mountProjectsPage() {
+  // Fetch latest GitHub commit
+  fetchLatestCommit();
+
   // Mark already-loaded progressive images
   document.querySelectorAll('.progressive-image').forEach(img => {
     if (img.complete) img.classList.add('progressive-image--loaded');
