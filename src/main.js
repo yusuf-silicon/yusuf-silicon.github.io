@@ -17,9 +17,13 @@ import './pages/publications.js';
 import './pages/academics.js';
 import './pages/experience.js';
 import './pages/projects.js';
+import './pages/hobbies.js';
+import './pages/contact.js';
 import { mountHomePage } from './pages/home.js';
 import { mountPublicationsPage } from './pages/publications.js';
 import { mountProjectsPage } from './pages/projects.js';
+import { mountHobbiesPage } from './pages/hobbies.js';
+import { mountContactPage } from './pages/contact.js';
 
 const app = document.getElementById('app');
 
@@ -91,6 +95,8 @@ async function init() {
   mountHomePage();
   mountPublicationsPage();
   mountProjectsPage();
+  mountHobbiesPage();
+  mountContactPage();
 
   window.addEventListener('hashchange', renderCurrentRoute);
   renderCurrentRoute();

@@ -328,7 +328,7 @@ function homeRender(profile) {
         <div class="home-bottom-annotation">
           <div class="home-annotation-line"></div>
           <div class="font-mono-data home-annotation-text">
-            SID: IN-240626 | REF: 226028 | ACTIVE
+            SID: IN-300626 | REF: 226028 | ACTIVE
           </div>
         </div>
       </div>

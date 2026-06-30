@@ -427,6 +427,13 @@
           "Future SoC integration support"
         ],
 
+        "technical_specs":{
+          "Target FPGA": "Xilinx Artix-7",
+          "Target Frequency": "100 MHz",
+          "Encryption Type": "RISC-V RV32I",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "https://github.com/yusuf-silicon/Pipelined-ChaCha20-Core",
         "thumbnail": "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/data flow design.png",
         "gallery": [
@@ -491,6 +498,13 @@
             "RTL-based implementation"
         ],
         
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "https://github.com/yusuf-silicon/ChaCha20-Core",
         "thumbnail": "../images/projects/vlsi/project 4 - ChaCha20 Core/power.png",
         "gallery": [
@@ -558,6 +572,13 @@
           "Transaction-level verification"
         ],
 
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "https://github.com/yusuf-silicon/AXI4-Lite-Slave",
         "thumbnail": "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Memory.png",
         "gallery": [
@@ -622,6 +643,13 @@
           "Dual-clock FIFO design"
         ],
 
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
+
         "github": "https://github.com/yusuf-silicon/Asynchronous-FIFO",
         "thumbnail": "../images/projects/vlsi/project 2 - Asynchronous FIFO/waveform.png",
         "gallery": [],
@@ -685,6 +713,13 @@
           "FPGA implementation",
           "Embedded security architecture"
         ],
+
+        "technical_specs":{
+          "ISA": "RISC-V RV32I",
+          "Target Frequency": "100 MHz",
+          "Target FPGA": "Xilinx Artix-7",
+          "Power Consumed": "120 mW"
+        },
 
         "github": "https://github.com/yusuf-silicon/LFSR-Cipher",
         "thumbnail": "../images/projects/vlsi/project 1 - LFSR Cipher/power graph.png",
@@ -891,7 +926,7 @@
 
         "issue_date": "2025-08-23",
 
-        "featured": false,
+        "featured": true,
 
         "skills": [
             "Battery Technology",
@@ -968,15 +1003,15 @@
         "description": "Creating and designing two-dimensional artwork using various media and techniques.",
         "Gallery": [
           {   
-            "image": "../images/hobbies/2d_arts/bowling_alley.png",
+            "Bowling Alley": "../images/hobbies/2d_arts/bowling_ally.png",
             "description": "A digital abstract artwork created using Adobe Photoshop, featuring vibrant colors, dynamic shapes, and layered textures to evoke a sense of movement and energy."
           },
           {
-            "image": "../images/hobbies/2d_arts/island_scene.png", 
+            "Island Scene": "../images/hobbies/2d_arts/island_scene.png", 
             "description": "A traditional landscape painting created using watercolor on paper, capturing the serene beauty of nature with soft gradients and delicate brushwork."
           },
           {
-            "image": "../images/hobbies/2d_arts/room.png", 
+            "The Room": "../images/hobbies/2d_arts/room.png", 
             "description": "A detailed pencil portrait sketch on paper, showcasing realistic shading, fine line work, and expressive facial features."
           }
         ]
@@ -992,8 +1027,15 @@
 
     "linkedin": "https://linkedin.com/in/yusuf-silicon",
 
-    "resume": "../documents/Yusuf_Ahmad_Resume.pdf"
-},
+    "resume": "../documents/Yusuf_Ahmad_Resume.pdf",
+
+    "spreadsheet_url": "https://script.google.com/macros/s/AKfycbwHKjIgZkegiukub8unT-gtySrbzQUc03S9Iv6NroID7BfIxQCoe4GNDJQ3xkVy6ySB/exec",
+    "professional_email_name": "Academic",
+    "professional_email": "yusuf.ahmad@s.amity.edu",
+    "professional_location_name": "university",
+    "professional_location": "Malhaur Railway Station Road, Gomti Nagar, Lucknow, Nijampur Malhaur, Uttar Pradesh 226028"
+
+  },
 
 "portfolioMetadata": {
     "version": "1.0.0",
