@@ -113,7 +113,7 @@ function hobbiesRender(profile) {
 
   const hobbies = profile.hobbies;
   const categories = collectCategories(hobbies);
-  const title = 'Creative Explorasion';
+  const title = 'Creative Exploration';
 
   // Tabs
   const tabs = categories.map((cat, i) =>
