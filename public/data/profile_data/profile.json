@@ -169,7 +169,10 @@
         },
 
         "description": [
-          "Completed an industrial internship focused on VLSI-based IC design methodologies, RTL development, FPGA implementation, and digital hardware design workflows. Implemented a low-power encryption system using FPGA and microcontroller co-design as the primary internship project."
+          "Completed an industrial internship focused on VLSI-based IC design methodologies, RTL development, FPGA implementation, and digital hardware design workflows. Implemented a low-power encryption system using FPGA and microcontroller co-design as the primary internship project.",
+          "Independently led the end-to-end design and verification of a lightweight FPGA-based encryption module (Low-Power LFSR XOR Encryption Core), implementing an SPI-driven XOR cipher with dynamically evolving LFSR key scheduling for secure sensor data transmission.",
+          "Developed synthesizable VHDL RTL for serial-to-parallel SPI data capture, dual-flip-flop clock synchronization for metastability mitigation, and cycle-accurate byte-level encryption; verified functionality using custom self-checking testbench in Vivado simulation environment.",
+          "Achieved post-implementation power estimates of ~26–35 mW with <1% LUT utilization (75 LUTs, 48 FFs) under Spartan-7 constraints, enabling single-cycle encryption latency per 8-bit payload and SPI throughput up to 10 MHz for real-time embedded communication workloads."
         ],
 
         "tech_stack": [
@@ -244,8 +247,7 @@
           }
         ],
 
-
-    "publications": [
+"publications": [
       {
           "title": "Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems",
   
@@ -288,7 +290,7 @@
           "venue": "2025 IEEE International Conference on Communication Networks and Computing (CNC)",
           "venue_short": "CNC_2025",
           "publisher": "IEEE",
-          "featured": true,
+          "featured": false,
   
           "year": 2025,
           "month": "December",
@@ -359,10 +361,12 @@
         ],
 
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+          "isa compatibility": "RV32I (Single-Cycle)",
+          "data width": "32-bit",
+          "hardware accelerator": "Memory-Mapped ChaCha20",
+          "synchonization model": "Polling-Based (No Interrupts)",
+          "target device": "Xilinx Artix-7 (xc7a35tcpg236-1)",
+          "logic footprint": "1,777 LUTs / 1,799 Registers (0 BRAM / 0 DSP)"
         },
 
         "github": "https://github.com/yusuf-silicon/RISC-V-SoC",
@@ -428,10 +432,12 @@
         ],
 
         "technical_specs":{
-          "Target FPGA": "Xilinx Artix-7",
-          "Target Frequency": "100 MHz",
-          "Encryption Type": "RISC-V RV32I",
-          "Power Consumed": "120 mW"
+          "core architecture":       "Pipelined Cryptographic Accelerator",
+          "algorithm support":       "ChaCha20 Stream Cipher",
+          "interface protocol":      "Valid-Ready Transaction Coordination",
+          "target device":           "Xilinx Spartan-7 (xc7s15ftgb196-1)",
+          "timing closure":          "WNS: 3.159 ns / WHS: 0.098 ns",
+          "research provenance":     "IEEE Publication (IC3ECSBHI-2026)"
         },
 
         "github": "https://github.com/yusuf-silicon/Pipelined-ChaCha20-Core",
@@ -499,10 +505,12 @@
         ],
         
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+            "core architecture":       "Iterative Sequential Encryption Core",
+            "algorithm support":       "ChaCha20 Stream Cipher",
+            "fsm scheduling":          "3-State Sequence (IDLE -> KEY_OPR -> SEND)",
+            "target device":           "Xilinx Spartan-7 (xc7s15ftgb196-1)",
+            "resource footprint":      "1,917 LUTs / 2,295 Registers (0 BRAM / 0 DSP)",
+            "critical constraint":     "1,128 Bonded IOBs (High Datapath Exposure)"
         },
 
         "github": "https://github.com/yusuf-silicon/ChaCha20-Core",
@@ -573,10 +581,12 @@
         ],
 
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+          "core architecture":       "Modular AXI4-Lite Slave Peripheral",
+          "channel structure":       "Decomposed Independent Channels (AW, W, B, AR, R)",
+          "control scheduling":      "Distributed Channel-Specific FSMs",
+          "addressing footprint":    "6-bit Address Width / 64-entry Memory Depth",
+          "response support":        "Protocol-Semantic Errors (OKAY, SLVERR, B_RESP/R_RESP)",
+          "verification stress":     "300,000 Total Random Operations (0 Scoreboard Mismatches)"
         },
 
         "github": "https://github.com/yusuf-silicon/AXI4-Lite-Slave",
@@ -644,10 +654,12 @@
         ],
 
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+          "core architecture": "CDC-Safe Dual-Clock Asynchronous FIFO",
+          "pointer scheduling": "Binary Local Addressing / Gray-Coded Cross-Domain Transfer",
+          "metastability defense": "2-FF Destination Synchronizers (No Cycle-Accurate Locking)",
+          "addressing footprint": "8-bit Data Width / 16-word Configurable Depth",
+          "flow control model": "Conservative Status Gating (Prevents Overflow/Underflow)",
+          "verification stress": "UVM Dual-Agent Framework (Siemens QuestaSim 2025.2 signoff)"
         },
 
         "github": "https://github.com/yusuf-silicon/Asynchronous-FIFO",
@@ -715,10 +727,12 @@
         ],
 
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+          "core architecture": "Lightweight Serialized Stream Encryption Engine",
+          "data interface": "SPI-Driven Deserialization (SCK, SS, MISO)",
+          "cryptographic flow": "Combinational XOR Matrix / Dynamic 8-bit LFSR",
+          "target device": "Xilinx Spartan-7 (xc7s15ftgb196-1)",
+          "power profile": "0.026 W Total On-Chip Power (0.006 W Dynamic)",
+          "resource footprint": "8 Bonded IOBs (Highly Optimized Logic Pruning)"
         },
 
         "github": "https://github.com/yusuf-silicon/LFSR-Cipher",
@@ -733,7 +747,7 @@
 
     ],
 
-    "iots": [
+    "iot": [
             {
         "id": "Fleet Management using Smart Technology",
         "title": "Fleet Management using Smart Technology",
@@ -793,10 +807,12 @@
         ],
 
         "technical_specs":{
-          "ISA": "RISC-V RV32I",
-          "Target Frequency": "100 MHz",
-          "Target FPGA": "Xilinx Artix-7",
-          "Power Consumed": "120 mW"
+            "core architecture": "Microcontroller-Based Smart Traffic Controller",
+            "algorithm support": "3-State Dynamic Gating (Energy Saver / One Side Green / Ratio Control)",
+            "hardware platform": "Arduino Uno (ATmega328P Architecture Core)",
+            "detection interface": "IR Traffic-Density Subsystem / GPS Telemetry Hooks",
+            "electrical profile": "Parallel RGB Array Sync / Series 220-ohm Balancing",
+            "development suite": "Arduino IDE / Proteus VSM Emulation Engine"
         },
 
         "github": "",
@@ -827,7 +843,9 @@
         "start_date": "2023-12-12",
         "end_date": "2024-03-04",
         "description": [
-          "Led a community outreach initiative focused on educating underprivileged children about fundamental rights, equality, education, and social responsibility. Organized awareness activities, educational sessions, and engagement programs aimed at empowering children from underserved communities through knowledge and community participation."
+          "Led a community outreach initiative focused on educating underprivileged children about fundamental rights, equality, education, and social responsibility. Organized awareness activities, educational sessions, and engagement programs aimed at empowering children from underserved communities through knowledge and community participation.",
+          "Formulated and executed a structured 8-week field action plan, designing creative educational modules and interactive camps to simplify complex concepts like constitutional equality, mutual respect, and fundamental child rights for marginalized youth.",
+          "Conducted grassroots field observations and stakeholder interviews to capture core socioeconomic variables regarding child labor and malnutrition analyzed community awareness gaps to synthesize actionable recommendations for localized welfare infrastructure under academic guidance."
         ],
                 "mentions": {
           "Course_Code": "SW102"
@@ -852,26 +870,26 @@
 
 "achievements": [
     {
-        "title": "IEEE Conference Publication",
-        "description": "Published 'Spartan-7 FPGA Based Implementation of ChaCha20 Accelerator for RISC-V Systems' at the 2026 International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI).",
+        "title": "IEEE IC3ECSBHI 2026 — Research Presenter",
+        "description": "Presented Paper ID 833 on Spartan-7 FPGA implementation of a ChaCha20 crypto-accelerator for RISC-V systems at GBU.",
         "year": 2026,
-        "category": "Publication",
+        "category": "Research",
         "featured": true
     },
 
     {
-        "title": "IEEE Conference Publication",
-        "description": "Published 'Low Power Encryption for IoT Devices using FPGA and Microcontroller' at the 2025 IEEE International Conference on Communication Networks and Computing (CNC).",
+        "title": "IEEE CNC 2025 — Research Paper Presenter",
+        "description": "Presented Paper ID 58 on low-power IoT encryption using FPGA and microcontrollers at REC Sonbhadra (Dec 2025).",
         "year": 2025,
-        "category": "Publication",
+        "category": "Research",
         "featured": true
     },    
 
     {
-        "title": "Research Paper Presentation at ICSDDRTI 2023",
-        "description": "Presented research work in oral/poster format at the International Conference on Sustainable Development and Disaster Resilience Through Innovation (ICSDDRTI 2023), organized by Amity School of Applied Sciences, Amity University Uttar Pradesh, Lucknow.",
+        "title": "International Conference on Sustainable Development (ICSDDRTI)",
+        "description": "Delivered a research presentation on disaster resilience and innovation at Amity University Lucknow (October 2023).",
         "year": 2023,
-        "category": "Conference Presentation",
+        "category": "Research",
         "organization": "Amity University Uttar Pradesh, Lucknow",
         "featured": true
     },    
@@ -883,19 +901,51 @@
         "category": "Academic",
         "featured": true
     },
-
+    
     {
         "title": "Rank 3 in Secondary Education",
         "description": "Graduated among the top-ranked students in Secondary Education at Staford School, Lucknow.",
         "year": 2020,
         "category": "Academic",
         "featured": true
-    }
-],
+    },
 
-"certifications": [
     {
-        "title": "Stress Management",
+        "title": "Excellence in Spoken English (Grade 9)",
+        "description": "Awarded a Certificate of Recognition for outstanding verbal communication and fluency during the 2019 academic session.",
+        "year": 2019,
+        "category": "Academic",
+        "featured": true
+    },
+    
+    {
+        "title": "National Cryptic Crossword Contest (CCCC 7.0)",
+        "description": "Earned a Certificate of Participation in the 2019 national-level inter-school crossword solving competition.",
+        "year": 2019,
+        "category": "Academic",
+        "featured": true
+    },
+
+    {
+        "title": "Star of the Month (Grade 9)",
+        "description": "Recognized at Staford School, Lucknow, for consistent academic excellence and exemplary classroom conduct.",
+        "year": 2019,
+        "category": "Academic",
+        "featured": true
+    },
+
+     {
+          "title": "National Essay Writing Event — UN Information Centre",
+          "description": "Received an Honourable Mention from Shri Ram Chandra Mission and UNIC India & Bhutan during the 2018 national competition",
+          "year": 2018,
+          "category": "Academic",
+          "featured": true
+    }
+  ],
+    
+    "certifications": [
+      {
+        "title": "Stress Management - NPTEL",
         "provider": "NPTEL",
         "institution": "Indian Institute of Technology Kharagpur",
         "instructor": "Prof. Haimanti Banerji",
@@ -934,87 +984,88 @@
             "Battery Materials",
             "Energy Systems"
         ]
+    },
+
+    {
+        "title": "Vedic Arithmetic Course (Term 2) - Abacus and Vedic Arithmetic Study (AVAS)",
+        "issue_date": "2017-03-10",
+        "category": "Academic",
+        
+        "provider": "AVAS - Abacus and Vedic Arithmetic Study",
+
+        "certificate_type": "Course Completion Certificate",
+
+        "featured": true,
+
+        "skills": [
+            "Mental Arithmetic",
+            "Abacus Training",
+            "Vedic Mathematics"
+        ]    
     }
 ],
 
 "hobbies": {
     "3D Models": {
-        "description": "Creating and designing three-dimensional models using Blender for visualization, prototyping, and artistic expression.",
-        "Gallery": [
-        {   
-          "Elk's Skull": "../images/hobbies/3d_models/elk.webp",
-          "description": "A 3D mesh wireframe model of a deer skull and antlers designed in Blender, showcasing clean edge-flow topology, precise organic sculpting, and a glowing holographic material shader."
-        },
-        {
-          "Bowling Alley": "../images/hobbies/3d_models/bowling_ally.webp", 
-          "description": "A 3D model of a bowling alley scene created in Blender, featuring detailed lane textures, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
-        },
-        {
-          "Bull's Day Out": "../images/hobbies/3d_models/bull_all_stars.webp", 
-          "description": "A 3D model of a bull's day out scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
-        },
+      "description": "Creating and designing three-dimensional models using Blender for visualization, prototyping, and artistic expression.",
+      "Gallery": [
         {
           "Chicken Island": "../images/hobbies/3d_models/chicken_island.webp", 
           "description": "A 3D model of a chicken island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
-        },
-        {
-          "Chicken Stand Off": "../images/hobbies/3d_models/chicken_stare_off.webp", 
-          "description": "A 3D model of a chicken stand-off scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
           "Morning Bliss": "../images/hobbies/3d_models/coffee_cup.webp", 
           "description": "A 3D model of a morning bliss scene created in Blender, featuring detailed object modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Meta Duck": "../images/hobbies/3d_models/duck_meta.webp", 
-          "description": "A 3D model of a meta duck scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
-        },
-        {
-          "A Night in the Forest": "../images/hobbies/3d_models/forest_night.webp", 
-          "description": "A 3D model of a night in the forest scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
-        },
-        {
-          "Block Age 3000": "../images/hobbies/3d_models/future_car.webp", 
-          "description": "A 3D model of a futuristic car scene created in Blender, featuring detailed vehicle modeling, realistic materials, and dynamic camera movement."
+          "Cozy Bed Room": "../images/hobbies/3d_models/room.webp", 
+          "description": "A 3D model of a cozy living room scene created in Blender, featuring detailed interior modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
           "Fountain of Dreams": "../images/hobbies/3d_models/island_scene.webp", 
           "description": "A 3D model of a dreamy island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Sculpture": "../images/hobbies/3d_models/passer_bird.webp", 
-          "description": "A 3D model of a sculpted bird scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+          "Bull's Day Out": "../images/hobbies/3d_models/bull_all_stars.webp", 
+          "description": "A 3D model of a bull's day out scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
           "Golden Bot 9000": "../images/hobbies/3d_models/robot_test.webp", 
           "description": "A 3D model of a golden robot scene created in Blender, featuring detailed mechanical modeling, realistic materials, and dynamic camera movement."
         },
+        {   
+          "Elk's Skull": "../images/hobbies/3d_models/elk.webp",
+          "description": "A 3D mesh wireframe model of a deer skull and antlers designed in Blender, showcasing clean edge-flow topology, precise organic sculpting, and a glowing holographic material shader."
+        },
         {
-          "Cozy Living Room": "../images/hobbies/3d_models/room.webp", 
-          "description": "A 3D model of a cozy living room scene created in Blender, featuring detailed interior modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+          "Block Age 3000": "../images/hobbies/3d_models/future_car.webp", 
+          "description": "A 3D model of a futuristic car scene created in Blender, featuring detailed vehicle modeling, realistic materials, and dynamic camera movement."
+        },
+        {
+          "Sculpture": "../images/hobbies/3d_models/passer_bird.webp", 
+          "description": "A 3D model of a sculpted bird scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "Chicken Stand Off": "../images/hobbies/3d_models/chicken_stare_off.webp", 
+          "description": "A 3D model of a chicken stand-off scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "A Night in the Forest": "../images/hobbies/3d_models/forest_night.webp", 
+          "description": "A 3D model of a night in the forest scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
+        },
+        {
+          "Meta Duck": "../images/hobbies/3d_models/duck_meta.webp", 
+          "description": "A 3D model of a meta duck scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
+        },
+        {
+          "Bowling Alley": "../images/hobbies/3d_models/bowling_ally.webp", 
+          "description": "A 3D model of a bowling alley scene created in Blender, featuring detailed lane textures, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
           "Bunny Eye": "../images/hobbies/3d_models/bunny_eye.webp", 
           "description": "A 3D close-up render of an organic eye structure designed in Blender, showcasing complex particle hair systems for eyelashes, macro texturing, and realistic glossy material reflections."
         }
       ]
-    },
-    "2D Arts": {
-        "description": "Creating and designing two-dimensional artwork using various media and techniques.",
-        "Gallery": [
-          {   
-            "Bowling Alley": "../images/hobbies/2d_arts/bowling_ally.webp",
-            "description": "A digital abstract artwork created using Adobe Photoshop, featuring vibrant colors, dynamic shapes, and layered textures to evoke a sense of movement and energy."
-          },
-          {
-            "Island Scene": "../images/hobbies/2d_arts/island_scene.webp", 
-            "description": "A traditional landscape painting created using watercolor on paper, capturing the serene beauty of nature with soft gradients and delicate brushwork."
-          },
-          {
-            "The Room": "../images/hobbies/2d_arts/room.webp", 
-            "description": "A detailed pencil portrait sketch on paper, showcasing realistic shading, fine line work, and expressive facial features."
-          }
-        ]
     }
   },
 
