@@ -11,7 +11,7 @@
     ],
     "citizenship": "United States",
     "location": "India",
-    "image": "../images/personal/profile_picture.png",
+    "image": "../images/personal/profile_picture.webp",
     "image_name": "Amity_Campus",
 
     "programming_language": {
@@ -187,12 +187,12 @@
         
         "pictures": {
           "images": {
-            "Public Activity: Teaching Children in local park": "../images/experience/internship/ardent_computech_pvt_ltd/teaching_children.png",
-            "Public Activity: Group Photograph in Campus": "../images/experience/internship/ardent_computech_pvt_ltd/campus_group_photo.png"
+            "Public Activity: Teaching Children in local park": "../images/experience/internship/ardent_computech_pvt_ltd/teaching_children.webp",
+            "Public Activity: Group Photograph in Campus": "../images/experience/internship/ardent_computech_pvt_ltd/campus_group_photo.webp"
           },
           "figures": {
-            "Hardware Implementation and Waveform Analysis of an LFSR-based XOR Encryption System over SPI.": "../images/experience/internship/ardent_computech_pvt_ltd/waveform.png",
-            "Internship Training Phase: Hardware Design Basics and XOR Logic Testing.": "../images/experience/internship/ardent_computech_pvt_ltd/assignment.png"
+            "Hardware Implementation and Waveform Analysis of an LFSR-based XOR Encryption System over SPI.": "../images/experience/internship/ardent_computech_pvt_ltd/waveform.webp",
+            "Internship Training Phase: Hardware Design Basics and XOR Logic Testing.": "../images/experience/internship/ardent_computech_pvt_ltd/assignment.webp"
           }
         }
       }  
@@ -366,10 +366,10 @@
         },
 
         "github": "https://github.com/yusuf-silicon/RISC-V-SoC",
-        "thumbnail": "../images/projects/vlsi/project 6 - RISC-V SoC/schematic.png",
+        "thumbnail": "../images/projects/vlsi/project 6 - RISC-V SoC/schematic.webp",
         "gallery": [
-          "../images/projects/vlsi/project 6 - RISC-V SoC/chacha20 input and output.png",
-          "../images/projects/vlsi/project 6 - RISC-V SoC/encrypted result in memory.png"
+          "../images/projects/vlsi/project 6 - RISC-V SoC/chacha20 input and output.webp",
+          "../images/projects/vlsi/project 6 - RISC-V SoC/encrypted result in memory.webp"
         ],
         "results": {
           "Schematic": "../images/projects/vlsi/project 6 - RISC-V SoC/schematic_portrait.pdf"
@@ -435,11 +435,11 @@
         },
 
         "github": "https://github.com/yusuf-silicon/Pipelined-ChaCha20-Core",
-        "thumbnail": "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/data flow design.png",
+        "thumbnail": "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/data flow design.webp",
         "gallery": [
-          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/waveform.png",
-          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/quarter round waveform.png",
-          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/tb waveform.png"
+          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/waveform.webp",
+          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/quarter round waveform.webp",
+          "../images/projects/vlsi/project 5 - Pipelined ChaCha20 Core/tb waveform.webp"
         ],
         "results": {}
       },
@@ -506,13 +506,13 @@
         },
 
         "github": "https://github.com/yusuf-silicon/ChaCha20-Core",
-        "thumbnail": "../images/projects/vlsi/project 4 - ChaCha20 Core/power.png",
+        "thumbnail": "../images/projects/vlsi/project 4 - ChaCha20 Core/power.webp",
         "gallery": [
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/core waveform.png",
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/key manager waveform.png",
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/quarter round waveform.png",
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/tb waveform.png",
-          "../images/projects/vlsi/project 4 - ChaCha20 Core/data flow design.png"
+          "../images/projects/vlsi/project 4 - ChaCha20 Core/core waveform.webp",
+          "../images/projects/vlsi/project 4 - ChaCha20 Core/key manager waveform.webp",
+          "../images/projects/vlsi/project 4 - ChaCha20 Core/quarter round waveform.webp",
+          "../images/projects/vlsi/project 4 - ChaCha20 Core/tb waveform.webp",
+          "../images/projects/vlsi/project 4 - ChaCha20 Core/data flow design.webp"
         ],
         "results":{
           "Schematic": "../images/projects/vlsi/project 4 - ChaCha20 Core/schematic.pdf"
@@ -580,12 +580,12 @@
         },
 
         "github": "https://github.com/yusuf-silicon/AXI4-Lite-Slave",
-        "thumbnail": "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Memory.png",
+        "thumbnail": "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Memory.webp",
         "gallery": [
-          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Scoreboard.png",
-          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Memory_Module.png",
-          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Read.png",
-          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Write.png"
+          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Scoreboard.webp",
+          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Memory_Module.webp",
+          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Read.webp",
+          "../images/projects/vlsi/project 3 - AXI4-Lite Slave/AXI_Write.webp"
         ],
         "results":{
           "Regression Summary":"../images/projects/vlsi/project 3 - AXI4-Lite Slave/Regression_Summary.txt"
@@ -651,7 +651,7 @@
         },
 
         "github": "https://github.com/yusuf-silicon/Asynchronous-FIFO",
-        "thumbnail": "../images/projects/vlsi/project 2 - Asynchronous FIFO/waveform.png",
+        "thumbnail": "../images/projects/vlsi/project 2 - Asynchronous FIFO/waveform.webp",
         "gallery": [],
         "results":{
         "Regression Summary": "../images/projects/vlsi/project 2 - Asynchronous FIFO/Regression Summary.txt",
@@ -722,11 +722,11 @@
         },
 
         "github": "https://github.com/yusuf-silicon/LFSR-Cipher",
-        "thumbnail": "../images/projects/vlsi/project 1 - LFSR Cipher/power graph.png",
+        "thumbnail": "../images/projects/vlsi/project 1 - LFSR Cipher/power graph.webp",
         "gallery": [
-          "../images/projects/vlsi/project 1 - LFSR Cipher/power consumption.png",
-          "../images/projects/vlsi/project 1 - LFSR Cipher/schematic.png",
-          "../images/projects/vlsi/project 1 - LFSR Cipher/waveform.png"
+          "../images/projects/vlsi/project 1 - LFSR Cipher/power consumption.webp",
+          "../images/projects/vlsi/project 1 - LFSR Cipher/schematic.webp",
+          "../images/projects/vlsi/project 1 - LFSR Cipher/waveform.webp"
         ],
         "results": {}
       }
@@ -800,13 +800,13 @@
         },
 
         "github": "",
-        "thumbnail": "../images/projects/iot/project 1 - Fleet Management using Smart Technology/front view.png",
+        "thumbnail": "../images/projects/iot/project 1 - Fleet Management using Smart Technology/front view.webp",
         "gallery": [
-          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/flowchart.png",
-          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/front 3d pcb.png",
-          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/layout.png",
-          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/schematic.png",
-          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/top view.png"
+          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/flowchart.webp",
+          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/front 3d pcb.webp",
+          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/layout.webp",
+          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/schematic.webp",
+          "../images/projects/iot/project 1 - Fleet Management using Smart Technology/top view.webp"
         ],
         "results": {}
 
@@ -842,9 +842,9 @@
 
         "pictures": {
           "images": {
-            "Teaching Children in local park": "../images/community_outreach/children_rights_empowering_slum_communities/pic1.png",
-            "Teaching Children in Local Community": "../images/community_outreach/children_rights_empowering_slum_communities/pic2.png",
-            "Public Activity: Group Photograph in local park": "../images/community_outreach/children_rights_empowering_slum_communities/pic3.png"
+            "Teaching Children in local park": "../images/community_outreach/children_rights_empowering_slum_communities/pic1.webp",
+            "Teaching Children in Local Community": "../images/community_outreach/children_rights_empowering_slum_communities/pic2.webp",
+            "Public Activity: Group Photograph in local park": "../images/community_outreach/children_rights_empowering_slum_communities/pic3.webp"
           }        
         }
     }
@@ -942,59 +942,59 @@
         "description": "Creating and designing three-dimensional models using Blender for visualization, prototyping, and artistic expression.",
         "Gallery": [
         {   
-          "Elk's Skull": "../images/hobbies/3d_models/elk.png",
+          "Elk's Skull": "../images/hobbies/3d_models/elk.webp",
           "description": "A 3D mesh wireframe model of a deer skull and antlers designed in Blender, showcasing clean edge-flow topology, precise organic sculpting, and a glowing holographic material shader."
         },
         {
-          "Bowling Alley": "../images/hobbies/3d_models/bowling_ally.png", 
+          "Bowling Alley": "../images/hobbies/3d_models/bowling_ally.webp", 
           "description": "A 3D model of a bowling alley scene created in Blender, featuring detailed lane textures, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Bull's Day Out": "../images/hobbies/3d_models/bull_all_stars.png", 
+          "Bull's Day Out": "../images/hobbies/3d_models/bull_all_stars.webp", 
           "description": "A 3D model of a bull's day out scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
-          "Chicken Island": "../images/hobbies/3d_models/chicken_island.png", 
+          "Chicken Island": "../images/hobbies/3d_models/chicken_island.webp", 
           "description": "A 3D model of a chicken island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Chicken Stand Off": "../images/hobbies/3d_models/chicken_stare_off.png", 
+          "Chicken Stand Off": "../images/hobbies/3d_models/chicken_stare_off.webp", 
           "description": "A 3D model of a chicken stand-off scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
-          "Morning Bliss": "../images/hobbies/3d_models/coffee_cup.png", 
+          "Morning Bliss": "../images/hobbies/3d_models/coffee_cup.webp", 
           "description": "A 3D model of a morning bliss scene created in Blender, featuring detailed object modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Meta Duck": "../images/hobbies/3d_models/duck_meta.png", 
+          "Meta Duck": "../images/hobbies/3d_models/duck_meta.webp", 
           "description": "A 3D model of a meta duck scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
-          "A Night in the Forest": "../images/hobbies/3d_models/forest_night.png", 
+          "A Night in the Forest": "../images/hobbies/3d_models/forest_night.webp", 
           "description": "A 3D model of a night in the forest scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Block Age 3000": "../images/hobbies/3d_models/future_car.png", 
+          "Block Age 3000": "../images/hobbies/3d_models/future_car.webp", 
           "description": "A 3D model of a futuristic car scene created in Blender, featuring detailed vehicle modeling, realistic materials, and dynamic camera movement."
         },
         {
-          "Fountain of Dreams": "../images/hobbies/3d_models/island_scene.png", 
+          "Fountain of Dreams": "../images/hobbies/3d_models/island_scene.webp", 
           "description": "A 3D model of a dreamy island scene created in Blender, featuring detailed environment modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Sculpture": "../images/hobbies/3d_models/passer_bird.png", 
+          "Sculpture": "../images/hobbies/3d_models/passer_bird.webp", 
           "description": "A 3D model of a sculpted bird scene created in Blender, featuring detailed character modeling, realistic textures, and dynamic camera movement."
         },
         {
-          "Golden Bot 9000": "../images/hobbies/3d_models/robot_test.png", 
+          "Golden Bot 9000": "../images/hobbies/3d_models/robot_test.webp", 
           "description": "A 3D model of a golden robot scene created in Blender, featuring detailed mechanical modeling, realistic materials, and dynamic camera movement."
         },
         {
-          "Cozy Living Room": "../images/hobbies/3d_models/room.png", 
+          "Cozy Living Room": "../images/hobbies/3d_models/room.webp", 
           "description": "A 3D model of a cozy living room scene created in Blender, featuring detailed interior modeling, realistic lighting, and a dynamic camera setup to capture the environment from multiple angles."
         },
         {
-          "Bunny Eye": "../images/hobbies/3d_models/bunny_eye.png", 
+          "Bunny Eye": "../images/hobbies/3d_models/bunny_eye.webp", 
           "description": "A 3D close-up render of an organic eye structure designed in Blender, showcasing complex particle hair systems for eyelashes, macro texturing, and realistic glossy material reflections."
         }
       ]
@@ -1003,15 +1003,15 @@
         "description": "Creating and designing two-dimensional artwork using various media and techniques.",
         "Gallery": [
           {   
-            "Bowling Alley": "../images/hobbies/2d_arts/bowling_ally.png",
+            "Bowling Alley": "../images/hobbies/2d_arts/bowling_ally.webp",
             "description": "A digital abstract artwork created using Adobe Photoshop, featuring vibrant colors, dynamic shapes, and layered textures to evoke a sense of movement and energy."
           },
           {
-            "Island Scene": "../images/hobbies/2d_arts/island_scene.png", 
+            "Island Scene": "../images/hobbies/2d_arts/island_scene.webp", 
             "description": "A traditional landscape painting created using watercolor on paper, capturing the serene beauty of nature with soft gradients and delicate brushwork."
           },
           {
-            "The Room": "../images/hobbies/2d_arts/room.png", 
+            "The Room": "../images/hobbies/2d_arts/room.webp", 
             "description": "A detailed pencil portrait sketch on paper, showcasing realistic shading, fine line work, and expressive facial features."
           }
         ]
